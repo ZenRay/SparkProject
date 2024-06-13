@@ -16,7 +16,7 @@ object Parallelism {
         // 可以使用 makdRDD，和 parallize 的第二参数一样都是并行度
         /**
          * 没有配置 numSlices 情况下，可以读取 Spark 配置的 spark.default.parallelism
-         * 还没有的情况时，会取环境的总核数 totalCores。
+         * 还没有的情况时，会取环境的总核数 totalCores。需要注意切分的方式
          */
         val seq = Seq[Int](1, 2, 3, 4)
         // val rdd: RDD[Int] = sparkContext.parallelize(seq, 2)
